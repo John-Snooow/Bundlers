@@ -11,6 +11,13 @@ module.exports = {
   },
 
   mode: "development", // Define o modo de operação do Webpack. 'development' ativa várias funcionalidades úteis para desenvolvimento, como a geração de mapas de origem (source maps).
+  devServer:{
+    static:{
+      directory:path.join(__dirname, "dist", "index.html"),
+    },
+    port:3000,
+    open:true,
+  },
   plugins: [new HTMLWebpackPlugin()],
 
   module: {
